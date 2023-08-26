@@ -1,0 +1,59 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    background-size: cover;
+    background-color: #1f1f1f;
+}
+
+.downloaded-apps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 20%;
+    height: 20vh;
+}
+
+.app p {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.app img {
+    border-radius: 25%;
+    width: 40%;
+}
+
+.app .app-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75%;
+    width: 90%;
+}
+
+.app .app-container:hover {
+    cursor: pointer;
+    animation: fadeOn 0.075s ease-in-out forwards;
+}
+
+@keyframes fadeOn {
+    from {
+        font-weight: normal;
+        width: 90%;
+    }
+    to {
+        font-weight: bold;
+        width: 100%;
+    }
+}

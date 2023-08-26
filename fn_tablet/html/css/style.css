@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+body {
+  position: relative;
+  font-family: 'Fira Code', monospace;
+  overflow: hidden;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+  visibility: hidden;
+}
+
+.tablet {
+  position: relative;
+  width: 60vw;
+  height: 75vh;
+}
+
+.tablet iframe, #frame {
+  position: absolute;
+}
+
+#frame {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.tablet iframe {
+  border: none;
+  width: 95%;
+  height: 92%;
+  top: 4%;
+  left: 2.5%;
+}
+
+.tablet footer {
+  position: absolute;
+  width: 100%;
+  height: 7.5%;
+  bottom: 5%;
+  z-index: 998;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.footer_btn {
+  width: 1.4vw;
+  height: 1.4vw;
+  filter: invert(100%) opacity(0.5);
+}
+
+.footer_btn:hover {
+  cursor: pointer;
+  width: 1.6vw;
+  height: 1.6vw;
+}
+
+.running-app {
+  background-color: whitesmoke;
+}
+
+#closed {
+  animation: moveOffScreen 0.5s ease-in-out forwards;
+}
+
+#open {
+  animation: moveOnScreen 0.5s ease-in-out forwards;
+}
+
+@keyframes moveOnScreen {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveOffScreen {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+}
