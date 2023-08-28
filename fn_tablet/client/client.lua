@@ -14,11 +14,11 @@ RegisterCommand("tablet", function(source)
 end)
 
 RegisterCommand("installApp", function(source, args)
-    SendNUIMessage({type = "doInstallApp", appId = args[1]})
+    SendNUIMessage({type = "doInstallApp", id = args[1]})
 end)
 
 RegisterCommand("uninstallApp", function(source, args)
-    SendNUIMessage({type = "doUninstallApp", appId = args[1]})
+    SendNUIMessage({type = "doUninstallApp", id = args[1]})
 end)
 
 function openTablet()
